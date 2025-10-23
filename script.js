@@ -5,24 +5,24 @@ class Rectangle {
 		this.height = height;
 	}
 	get width(){
-		return `${this.width}`;
+		return this.width;
 	}
 	get height(){
-		return `${this.height}`;
+		return this.height;
 	}
 	getArea(){
-		return `${this.height*this.width}`;
+		return this.height*this.width;
 	}
 }
 
 class Square extends Rectangle {
-	constructor(width,height,side){
-		super(width,height);
-		this._side = side;
+	constructor(side){
+		super(side,side);
+		// this._side = side;
 	}
 	getPerimeter(){
-		const peri = 4*this.side;
-		return `${peri}`;
+		const peri = 4*this.width;
+		return peri;
 	}
 }
 
